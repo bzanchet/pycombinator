@@ -31,5 +31,37 @@ class TestPycombinator(unittest.TestCase):
         self.assertEquals(3, pycombinator.mlength_2(['a', 'b']))
         self.assertRaises(TypeError, pycombinator.mlength_2, ['a', 'b', 'c'])
 
+    def test_mmlength_0(self):
+        self.assertEquals(1, pycombinator.mmlength_0([]))
+        self.assertRaises(TypeError, pycombinator.mmlength_0, ['a'])
+        
+    def test_mmlength_1(self):
+        self.assertEquals(1, pycombinator.mmlength_1([]))
+        self.assertEquals(2, pycombinator.mmlength_1(['a']))
+        self.assertRaises(TypeError, pycombinator.mmlength_1, ['a', 'b'])
+
+    def test_mmlength_2(self):
+        self.assertEquals(1, pycombinator.mmlength_2([]))
+        self.assertEquals(2, pycombinator.mmlength_2(['a']))
+        self.assertEquals(3, pycombinator.mmlength_2(['a', 'b']))
+        self.assertRaises(TypeError, pycombinator.mmlength_2, ['a', 'b', 'c'])
+
+    def test_mmmlength_1(self):
+        self.assertEquals(1, pycombinator.mmmlength_1([]))
+        self.assertEquals(2, pycombinator.mmmlength_1(['a']))
+        self.assertRaises(TypeError, pycombinator.mmmlength_1, ['a', 'b'])
+
+    def test_mmmlength(self):
+        self.assertEquals(1, pycombinator.mmmlength([]))
+        self.assertEquals(2, pycombinator.mmmlength(['a']))
+        self.assertEquals(3, pycombinator.mmmlength(['a', 'b']))
+        self.assertEquals(8, pycombinator.mmmlength(range(7)))
+
+    def test_length_y(self):
+        self.assertEquals(1, pycombinator.length_y([]))
+        self.assertEquals(2, pycombinator.length_y(['a']))
+        self.assertEquals(3, pycombinator.length_y(['a', 'b']))
+        self.assertEquals(8, pycombinator.length_y(range(7)))
+
 if __name__ == '__main__':
     unittest.main()
