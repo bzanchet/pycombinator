@@ -175,6 +175,7 @@ mmmlength = \
                 or (add1
                     (length((tail(l)))))))))
 
+# renaming mklength to l
 mmmlength = \
     ((lambda le: 
         ((lambda f: f(f))
@@ -191,9 +192,11 @@ mmmlength = \
            
 # "now that we understand recursion, we can use 'def' again"  
 def Y(le):
-    return((lambda f: f(f))
+    return(
+        (lambda f: f(f))
         (lambda f: \
-             le(lambda x: (f(f))(x))))
+             le(lambda x: (f(f))(x)))
+    )
 
 length_y = Y(
     lambda length: \
