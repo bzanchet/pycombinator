@@ -1,7 +1,7 @@
 Pycombinator - Y Combinator implementation in python
 
 
-This is a step-by-step implementation of the Y Combinator - http://en.wikipedia.org/wiki/Y_combinator -  function in python using test-driven development. 
+This is a step-by-step implementation of the Y Combinator - http://en.wikipedia.org/wiki/Y_combinator -  function in python using test-driven development.
 
 Basically, following the same reasoning from the book "the little schemer", pages 160-173.
 
